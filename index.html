@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Ruslan Pylypiv">
-    <!-- <meta name="google-signin-client_id" content="825779565649-5oganc1jav938tuca77qm6ljpvk5dvmu.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <meta name="google-signin-client_id" content="825779565649-5oganc1jav938tuca77qm6ljpvk5dvmu.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <!-- articleFormsHandler.js -->
     <link rel="stylesheet" href="./css/treesBlog.css">
@@ -24,6 +24,38 @@
             <a class="linker" href="#addOpinion">Add your opinion</a>
             <a class="linker" href="#artInsert">Add Article</a>
         </nav>
+        <div id="content">
+            <p>Prihláste sa:</p>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          </div>
+          <script>
+            function onSignIn(googleUser) {
+              // získame profil používateľa
+              var profile = googleUser.getBasicProfile();
+      
+              console.log('Úplné meno: ' + profile.getName());
+              console.log('Meno: ' + profile.getGivenName());
+              console.log('Priezvisko: ' + profile.getFamilyName());
+              console.log("Obrázok profilu: " + profile.getImageUrl());
+              console.log("Email: " + profile.getEmail());
+      
+              // autorizačný token
+              var id_token = googleUser.getAuthResponse().id_token;
+              console.log("ID Token: " + id_token);
+      
+              // zmeníme content element
+              document.querySelector("#content").innerHTML = "<p>Vitajte " + profile.getGivenName() + "! Kliknite pre <a href='#' onclick='signOut();'>odhlásenie</a>.</p>";
+            }
+      
+            function signOut() {
+              var auth2 = gapi.auth2.getAuthInstance();
+              auth2.signOut().then(function () {
+                alert("Boli ste odhlásený...");
+                // znovu načítame stránku a zobrazíme tlačidlo pre prihlásenie
+                location.reload();
+              });
+            }
+          </script>
     </div>
 </header>
 
