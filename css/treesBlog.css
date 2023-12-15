@@ -1,0 +1,287 @@
+body {
+    /* background-color: black; */
+    background-image: url("https://i.pinimg.com/564x/35/7f/4c/357f4c73934c77aa24a220029b774de0.jpg");
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, serif;
+    line-height: 1.5;
+    max-width: 1200px; 
+    margin: 0 auto; /* Center the body */
+    font-size: large;
+}
+h1{
+    font-size: xx-large;
+    color: rgb(248, 212, 146);
+}
+article {
+    background-color: rgba(40, 40, 66, 0.5);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.linker {
+    background-color: rgb(40, 40, 66);
+    color: #fff;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.linker:hover {
+    background-color: wheat;
+    color: black;
+    transform: translateY(-5px);
+}
+
+.model-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.model-card {
+    flex: 1;
+    max-width: 1200px; /* Change max-width to 1200px */
+    box-sizing: border-box;
+    background-color: rgba(40, 40, 66, 0.5);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.model-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-container {
+    position: relative;
+}
+.image-container img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.2);
+  }
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: large; /* Adjust the font size as needed */
+}
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: wheat;
+    font-size: larger;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(99, 99, 109);
+}
+
+.input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(45, 45, 77);
+    background-color: rgb(40, 40, 66);
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: rgb(40, 40, 66);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(99, 99, 109);
+}
+
+.menuLink {
+    background-color: #212121;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+#paginationButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuLink a {
+    color: rgb(99, 99, 109);
+    text-decoration: none;
+}
+
+.menuLink a:hover {
+    color: wheat;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+.nakai-table th,
+.nakai-table td {
+    border: 1px solid rgb(45, 45, 77);
+    padding: 10px;
+    text-align: left;
+}
+
+.nakai-table th {
+    background-color: rgb(40, 40, 66);
+}
+
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.photo {
+    margin: 0px auto;
+    width: 48%;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-container .photo:hover {
+    transform: scale(1.2);
+}
+
+nav ul li {
+    display: inline;
+    margin: 15px;
+}
+
+main {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.line {
+    border-bottom: 2px solid rgb(40, 40, 66);
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+}
+
+a {
+    color: wheat;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media query for screens smaller than 600 pixels */
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: cover;
+        font-size: 16px; /* Set to an appropriate size for small screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust the size according to your design */
+    }
+    article {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .model-card {
+        max-width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    nav a {
+        margin: 0 5px;
+    }
+
+    form {
+        max-width: 150%;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .menuLink {
+        margin-top: 10px;
+    }
+  }
+  

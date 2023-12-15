@@ -1,0 +1,509 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ruslan Pylypiv">
+    
+    <!-- <meta name="google-signin-client_id" content="825779565649-5oganc1jav938tuca77qm6ljpvk5dvmu.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+    <!-- articleFormsHandler.js -->
+    <link rel="stylesheet" href="./css/treesBlog.css">
+    <title>Porsche</title>
+</head>
+
+<body>
+<header>
+    <h1>Porschea</h1>
+    <div class="menu" id="menuTitle">
+        <nav id="menuIts" class="menu mnHide">
+            <a class="linker" href="#welcome">Welcome!</a>
+            <a class="linker" href="#akira">RWB author!</a>
+            <a class="linker" href="#models">Porsche models</a>
+            <a class="linker" href="#articles">Articles</a>
+            <a class="linker" href="#opinions">Visitor opinions</a>
+            <a class="linker" href="#addOpinion">Add your opinion</a>
+            <a class="linker" href="#artInsert">Add Article</a>
+        </nav>
+    </div>
+</header>
+
+<main id="router-view"></main>
+
+<footer>
+    Pylypiv Ruslan <br>
+    (c) 2023-12.12
+</footer>
+
+
+<!--Templates for html, dynamically inserted by the router -->
+<script id="template-models" type="text/template">
+    <div class="model-row">
+        <!-- Porsche 911 -->
+        <div class = "model-row" >
+            <div class="model-card">
+                <h2>Porsche 911</h2>
+                <div class="image-container">
+                    <img src="https://images-porsche.imgix.net/-/media/732679710B254798A8B72E015D6783E3_05C275949B6D488AB04CDF08043B23FE_911_Carrange?w=1250&q=85&auto=format" alt="Porsche 911">
+                    <p class="image-caption">The Porsche 911 is a classic sports car that has been in production since the 1960s. It is known for its iconic design and powerful performance.</p>
+                </div>
+                <p >About Us: Your Company is a leading provider of luxury sports cars, dedicated to delivering unparalleled driving experiences to enthusiasts worldwide.</p>
+
+            </div>
+
+            <!-- Porsche Panamera -->
+            <div class="model-card">
+                <h2>Porsche Panamera</h2>
+                <div class="image-container">
+                    <img src="https://images-porsche.imgix.net/-/media/7F0EFA8CC02F44BE8F4CBD3C7C36CB17_9E792732F7F54F8BA2B7A35D7584304C_PA24P5KOX0007_RGB_3-4_final?w=1250&q=85&auto=format" alt="Porsche Panamera">
+                    <p class="image-caption">The Porsche Panamera is a luxurious and stylish sports car that combines performance with comfort.</p>
+                </div>
+                <!-- Add information about your company -->
+                <p>About Us: Your Company is committed to excellence, offering a diverse range of high-end vehicles to meet the preferences of discerning customers.</p>
+            </div>
+        </div>
+
+        <!-- Porsche Cayenne -->
+        <div class = "model-row">
+            <div class="model-card">
+                <div class="image-container">
+                    <h2 class="image-captions">Porsche Cayenne</h2>
+                    <img src="https://images-porsche.imgix.net/-/media/30F1725256BD457999C7C3ABB8B5A5D6_27629797CE32469390271EB6C205580E_Cayenne_Carrange?w=1250&q=85&auto=format" alt="Porsche Cayenne">
+                    <p class="image-caption">The Porsche Cayenne is a luxury SUV known for its sporty handling and comfortable ride, making it a favorite among SUV enthusiasts.</p>
+                </div>
+                <!-- Add information about your company -->
+                <p> About Us: Your Company, a pioneer in the luxury automotive industry, is dedicated to pushing the boundaries of innovation and performance.</p>
+            </div>
+
+            <!-- Porsche Taycan -->
+            <div class="model-card">
+                <h2>Porsche Taycan</h2>
+                <div class="image-container">
+                    <img src="https://images-porsche.imgix.net/-/media/4444DA9E676240CA9D229768A70D30ED_EA05D371F1C142D3B95BDABCFAC62C5A_Macan_Carrange?w=1250&q=85&auto=format" alt="Porsche Taycan">
+                    <p class="image-caption">The Porsche Taycan is an all-electric sports car with impressive acceleration and cutting-edge technology, representing Porsche's foray into the electric vehicle market.</p>
+                </div>
+                <!-- Add information about your company -->
+                <p>About Us: Your Company is at the forefront of sustainable mobility, combining elegance and performance in the electric vehicle landscape.</p>
+            </div>
+        <div>
+    </div>
+</script>
+
+
+
+<script id="template-welcome" type="text/template">
+    <article>
+        <h2>About Our Website</h2>
+        <p class = "line" >Welcome to our dedicated website for Porsche enthusiasts and fans of Akira Nakai, the legendary car customizer. Here, we celebrate the artistry, performance, and innovation that define Porsche vehicles. Our site is a hub of information about various Porsche car models, from classic to contemporary. Whether you're a long-time Porsche aficionado or a newcomer, you'll find detailed specifications, breathtaking photos, and engaging articles about these iconic automobiles.<br></p>
+        <h2>About Porsche Models</h2>
+        <p class = "line" >Porsche cars are renowned for their elegant design, powerful engines, and superior handling. From the timeless Porsche 911 to the luxurious Porsche Panamera and the versatile Porsche Cayenne, each model represents the pinnacle of automotive engineering. On our website, you can explore in-depth features of these models, including their performance capabilities, cutting-edge technology, and the unique driving experience they offer.</p>
+        <br>
+        <h2 >About Akira Nakai</h2>
+        <p class = "line" >Akira Nakai is a master car customizer and the founder of Rauh-Welt Begriff (RWB), a tuning company famous for modifying Porsche cars into unique works of art. Nakai-san's passion for Porsches and his distinctive approach to customization have earned him a worldwide reputation. Our site pays tribute to his creativity and craftsmanship, showcasing some of his most extraordinary creations and sharing the inspiring story behind each one.</p>
+        <br>
+        <h2 >Contact Us</h2>
+        <p class = "line" >Do you have questions, feedback, or a passion for Porsche cars and Akira Nakai's creations? We'd love to hear from you! Feel free to contact us through our website. Our team of enthusiasts is here to assist you and share the excitement of the Porsche and RWB experience.</p>
+        <br>
+    </article>
+</script>
+
+<script id="template-articles" type="text/template">
+    {{#articles}}
+    <article>
+        <h2><a href="{{detailLink}}">{{title}}</a></h2> 
+        <p>by {{author}}</p>
+    </article>
+    {{/articles}}
+
+    <footer class="menuLink">
+        <div id = "paginationButtons" class = "pagination">
+            <button id="prevPage">Previous Page</button>
+            
+            <span>Page {{currentPage}} of {{totalPages}}</span>
+            <button id="nextPage">Next Page</button>
+            
+        </div>
+        <a href="#menuTitle">Back to the menu</a>
+    </footer>
+</script>
+
+
+<script id="template-opinions" type="text/template">
+    <article  id="artOpinions">
+        <h2 class = "line" >Visitor Opinions</h2>
+        {{#.}}
+        <section>
+            <h3>name: {{name}}</h3>
+            <!-- <p>Created in: <i>{{createdDate}}</i></p> -->
+            <p>Favorite car: {{cars}}</p>
+            <p class = "line">{{comment}}</p>
+            <!-- <p>{{willReturn}}</p> -->
+        </section>
+        {{/.}}
+        {{^.}}
+        <section>
+            Sorry, no opinions found.
+        </section>
+        {{/.}}
+        <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+    </article>
+</script>    
+
+<script id="template-addOpinion" type="text/template">
+    <article  id="artOpnFrm">
+        <h2>Your Opinion</h2>
+        <p>
+            Please, use the form below to state your opinion about this page.
+        </p>
+        <form id="opnFrm">
+            <label for="nameElm">Your name:</label>
+            <input class = "input" type="text" name="login" id="nameElm" size="20" maxlength="50" 
+                   placeholder="Enter your name here" required />
+            <br><br>
+            <label for="opnElm">Your opinion:</label>
+            <textarea name="comment" id="opnElm" cols="50" rows="3" 
+                      placeholder="Express your opinion here" required></textarea>
+            <br><br>
+
+            <label for="keywords">What describes Porsche cars:</label>
+            <input class = "input" type="text" id="keywords" name="keywords" list="keywordsList" placeholder="E.g., Performance, Luxury, Speed">
+            <br><br>
+            <label for="favoritePorsche">Select your favorite Porsche car:</label>
+            <select id="favoritePorsche" name="favoritePorsche" required>
+                <option value="" disabled selected>Select your favorite Porsche car</option>
+                <option value="911">Porsche 911</option>
+                <option value="Cayman">Porsche Cayman</option>
+                <option value="Panamera">Porsche Panamera</option>
+                <option value="Macan">Porsche Macan</option>
+                <option value="Cayenne">Porsche Cayenne</option>
+            </select>
+            <br><br>
+            <fieldset>
+                <legend>What do you like in Porsche?</legend>
+            
+                <label for="rate2">Luxury Cars</label>
+                <input class = "input" type="checkbox" id="rate2" name="mood" value="2" checked>
+            
+                <label for="rate1">Sports Cars</label>
+                <input class = "input"  type="checkbox" id="rate1" name="mood" value="1">
+            
+                <label for="rate0">Comfort Cars</label>
+                <input class = "input" type="checkbox" id="rate0" name="mood" value="0">
+            </fieldset> 
+
+            <br><br>
+            <label for="keywords">What describes Porsche cars:</label>
+            <input class = "input" type="text" id="keywords" name="keywords" list="keywordsList" placeholder="E.g., Performance, Luxury, Speed">
+
+            <datalist id="keywordsList">
+                <option value="Porsche">
+                <option value="Luxury Cars">
+                <option value="">
+                <option value="Automotive Design">
+                <option value="Precision Engineering">
+                <option value="German Engineering">
+                <option value="Innovation">
+                <option value="Elegance">
+                <option value="Classic">
+                <option value="Supercars">
+
+            </datalist>
+
+            <br><br>
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+        </form>
+        <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+    </article>
+</script> 
+
+<script id="template-article" type="text/template">
+    <article>
+        <h2>{{title}}</h2>
+        <p>
+            by {{author}}
+        </p>
+        {{#imageLink}}
+        <figure>
+            <img src="{{imageLink}}" alt="article figure" />
+        </figure>
+        {{/imageLink}}
+        <div>{{{content}}}</div>
+        <p>
+            Keywords:
+            {{tags}}
+        </p>
+
+        <!-- Display Comments Section -->
+    </article>
+    <footer>
+        <button><a href="{{backLink}}" class="linkAsButton"><< Back</a></button>
+        <button><a href="{{editLink}}" class="linkAsButton">Edit</a></button>
+        <button><a href="{{deleteLink}}" class="linkAsButton">Delete</a></button>
+        <button><a href="#menuTitle" class="linkAsButton">Up to the menu</a></button>
+    </footer>
+    <br>
+    <article>
+        <section id="commentsSection">
+            <h4>Comments</h4>
+            {{#comments}}
+                <div>
+                    <h2>Created by: {{author}}</h2>
+                    <p>{{text}}</p>
+                </div>
+            {{/comments}}
+            <button id="addCommentBtn">Add Comment</button><br>
+            <div id="commentForm" style="display: none;">
+                <form id="commentForm">
+                    <label for="commenter">Your Name:</label>
+                    <input type="text" id="commenter" name="commenter" required><br>
+                    <label for="comment">Your Comment:</label>
+                    <textarea id="comment" name="comment" rows="3" required></textarea>
+                    <br><button type="button" id="submitComment">Submit Comment</button><br>
+                </form>
+            </div>
+            <br>
+            <div id = "paginationCommentButtons" class = "">
+                <button id="prevCommPage" >Previous Page</button>
+                
+                <span id = "numberingPage" >Page {{currentCommPage}} of {{totalCommPages}}</span>
+                <button id="nextCommPage">Next Page</button>
+                
+            </div>
+        </section>
+    </article>
+</script>
+
+<script id="template-Akira" type="text/template">
+        <article class="line">
+            <h2>How is he associated with Porsche?</h2>
+            <p>
+                Akira Nakai, also known as Nakai-San, is a renowned Japanese car designer and builder who gained international recognition for his work with Porsche cars.
+                He is the founder of RAUH-Welt Begriff (RWB), a famous tuning and customization company based in Japan. Nakai-San is particularly known for his unique and distinctive modifications to Porsche 911 models.
+                Nakai-San's connection with Porsche lies in his passion for the brand and his talent for transforming Porsche 911s into customized, wide-body, and visually striking creations. He is known for his artistic approach, blending traditional Japanese aesthetics with modern automotive design.
+                Nakai-San's work typically involves widening the fenders, adding aggressive aerodynamic kits, and creating bespoke bodywork designs, giving each Porsche 911 a highly individual and eye-catching appearance.
+                His collaboration with Porsche enthusiasts and owners worldwide has led to the creation of numerous customized Porsche 911s, each bearing Nakai-San's unique signature style. His craftsmanship and dedication have made him a respected figure in the automotive community, and his customized Porsches are highly sought after by collectors and enthusiasts around the globe.
+            </p>
+        </article>
+        <article class="line">
+            <h2>Nakai-San Progects</h2>
+            <div class="photo-container">
+                <div class = "model-row">
+                    <div class="photo">
+                        <img src=" fig/rwb-964-turbo.jpg" alt="Photo №1">
+                    </div>
+                    <div class="photo">
+                        <img src="fig/18.jpg" alt="Photo 1">
+                    </div>
+                </div>
+                <div class = "model-row">
+                    <div class="photo">
+                        <img src="fig/13.jpg" alt="Photo 1">
+                    </div>
+                    <div class="photo">
+                        <img src="fig/16946235003_454e8c7f87_o.jpg " alt="Photo 1">
+                    </div>
+                <div>
+                <div class = "model-row">
+                    <div class="photo">
+                        <img src="fig/1995.jpg " alt="Photo 1">
+                    </div>
+                    <div class="photo">
+                        <img srcset="fig/320w6.jpg 320w,fig/480w6.jpg 480w,fig/800w6.jpg 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" src="fig/800w6.jpg" alt="Porsche">
+                    </div>
+                <div>
+            </div>
+        </article>
+        <div class="line">
+            <h2>Porsche Design Philosophy:</h2>
+            <ul>
+                <li>Timeless Aesthetics</li>
+                <li>Functional Simplicity</li>
+                <li>Driver-Centric Interiors</li>
+            </ul>
+            
+            <h3>Porsche Performance Upgrades:</h3>
+            <ol>
+                <li>Engine Tuning</li>
+                <li>Suspension Modifications</li>
+                <li>Brake Enhancements</li>
+                <li>Exhaust Systems</li>
+                <li>Turbocharging</li>
+            </ol>
+        </div>
+        <table class="nakai-table">
+            <caption><h2>Nakai-San's Porsche Projects</h2></caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">№</th>
+                    <th rowspan="2">Car Model</th>
+                    <th rowspan="2">Year</th>
+                    <th colspan="2">Project Details</th>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <th>Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Porsche 911 Carrera 2 (Type 964) (RWB “Tiffany”)</td>
+                    <td>1990</td>
+                    <td>Nakai-San's first project. He founded RAUH-Welt Begriff (RWB) in 1997.</td>
+                    <td>Modified bodywork, unique aerodynamic kits, special wheels</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Porsche 911 (Type 993)</td>
+                    <td>1995</td>
+                    <td>Aggressive bodywork, widened wheel arches, expressive paintwork</td>
+                    <td>Wider rear fenders, improved aerodynamics</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Porsche 911 (Type 996)</td>
+                    <td>2000</td>
+                    <td>First wide-body project. Added specific bodywork details and aerodynamic elements</td>
+                    <td>More aggressive and unique design</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Porsche 911 (Type 991)</td>
+                    <td>2011</td>
+                    <td>Unique style with custom colors, aggressive lines, enlarged wheel arches</td>
+                    <td>Distinctive appearance</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Porsche 911 (Type 992)</td>
+                    <td>2019</td>
+                    <td>New aerodynamic elements and bodywork details</td>
+                    <td>Even more expressive and unique design</td>
+                </tr>
+            </tbody>
+        </table>  
+</script>
+
+<script id="template-article-form" type="text/template">
+    <article>
+        <h2>{{formTitle}}</h2> <br><br>
+
+        <form id="articleForm">
+            <label for="author">Author:</label>
+            <input class = "input" type="text" name="author" id="author" value="{{author}}" size="50" 
+                   title="Article author, max. length 100 characters." 
+                   maxlength="100" placeholder="e.g. Ján Trieska" />
+            <br>
+            <label for="title">Title:</label>
+            <input class = "input" type="text" name="title" id="title" value="{{title}}" size="50"  
+                   maxlength="100" pattern="\S[\S\s]*" placeholder="e.g. My story." required 
+                   title="Article title, mandatory item, max. length: 100 characters. 
+The first character must not be a space."  />
+            <br>
+            <label for="imageLink">Image (url):</label>
+            <input class = "input" type="url" name="imageLink" id="imageLink" value="{{imageLink}}" size="50" 
+                   title="Image URL, max. length 100 characters." maxlength="100"/>
+            <br>
+            <label></label>
+            <button type="button" id="btShowFileUpload">
+                Upload image
+            </button>
+
+            <fieldset class="added hiddenElm" id="fsetFileUpload">
+                <legend>Image Upload</legend>
+                <input class = "input" type="file" id="flElm" name="file" accept="image/jpeg, image/png"/>
+                <br />
+                <button type="button" id="btFileUpload">
+                    Send image to server </button>
+                <button type="button" id="btCancelFileUpload">
+                    Cancel uploading </button>
+            </fieldset>
+
+
+            <br>
+            <label for="content">Article content:</label>
+            <textarea
+                    class = "input" name="content" id="content" spellcheck="true" lang="sk"
+                    cols="50" rows="20" required
+                    title="Article content, mandatory item, can be plain text or in HTML.">
+              {{content}}
+            </textarea>
+            <br>
+            <label for="tags">Keywords:</label>
+            <input  class = "input" type="text" name="tags" id="tags" value="{{tags}}" size="50"
+                    title="Keyword list, comma separated." placeholder="e.g. village, drama" />
+            <br> <br>
+            <button type="reset"> Reset Form </button>
+            <button type="submit"> {{submitBtTitle}} </button>
+
+        </form>
+    </article>
+
+    <footer>
+        <a href="{{backLink}}" class="linkAsButton"><< Back</a>
+        <a href="#menuTitle" class="linkAsButton">Up to the menu</a>
+    </footer>
+</script> 
+
+<script id="template-articles-error" type="text/template">
+
+    <article>
+        <h2>Articles acquisition failed</h2>
+        <p>
+            {{errMessage}}
+        </p>
+    </article>
+</script>
+
+    <script id="template-article-add-form" type="text/template">
+        <article>
+            <h2>You can create your article here</h2>
+    
+            <form id="AddarticleForm">
+                <label for="author">Author:</label>
+                <input class = "input" type="text" name="author" id="author"  size="50" 
+                       title="Article author, max. length 100 characters." 
+                       maxlength="100" placeholder="e.g. Ján Trieska" />
+                <br>
+                <label for="title">Title:</label>
+                <input class = "input" type="text" name="title" id="title"  size="50"  
+                       maxlength="100" pattern="\S[\S\s]*" placeholder="e.g. My story." required 
+                       title="Article title, mandatory item, max. length: 100 characters. 
+    The first character must not be a space."  />
+                <br>
+                <label for="imageLink">Image (url):</label>
+                <input class = "input" type="url" name="imageLink" id="imageLink" size="50" 
+                       title="Image URL, max. length 100 characters." maxlength="100"/>
+    
+    
+                <br>
+                <label for="content">Article content:</label>
+                <textarea
+                        class = "input" name="content" id="content" spellcheck="true" lang="sk"
+                        cols="50" rows="20" required
+                        title="Article content, mandatory item, can be plain text or in HTML.">
+                </textarea>
+                <br>
+                <label for="tags">Keywords:</label>
+                <input  class = "input" type="text" name="tags" id="tags"  size="50"
+                    title="Keyword list, comma separated." placeholder="e.g. village, drama" />
+            <br> <br>
+            <button type="reset"> Reset Form </button>
+            <button type="submit"> Submit</button>
+    
+        </form>
+    </article>
+    
+    <footer>
+        <a href="#menuTitle" class="linkAsButton">Up to the menu</a>
+    </footer>
+</script>  
+
+<!-- JavaScript -->
+<script  type = "module" src="js/index.js"></script>
+<script  src="js/addOpinion.js" nomodule></script>
+<script   src="js/articleFormsHandler.js" nomodule></script>
+
+</body>
+</html>
